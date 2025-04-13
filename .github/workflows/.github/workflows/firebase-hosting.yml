@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main  # or use 'master' if that’s your default
-
+ paths:
+      - '**'  
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
