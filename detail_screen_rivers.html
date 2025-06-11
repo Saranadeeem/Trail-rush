@@ -1767,14 +1767,18 @@ async function populateRiverDropdown() {
     riverSelect.appendChild(option);
   });
 
-  // Initial sections for the first river
+  // Set dropdown to river from URL if available
+  let initialRiver = null;
   if (riversData.length > 0) {
-    updateSections(riversData[0].sections);
+    initialRiver = riversData.find(r => r.name === riverSlug) || riversData[0];
+    riverSelect.value = initialRiver.name;
+    updateSections(initialRiver.sections);
   }
 
   // On change, update sections
   riverSelect.addEventListener('change', e => {
     const selectedRiver = riversData.find(r => r.name === e.target.value);
+    riverSlug = selectedRiver ? selectedRiver.name : null;
     updateSections(selectedRiver ? selectedRiver.sections : []);
   });
 
