@@ -1972,10 +1972,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const riverDocRef = doc(db, 'Detailrivers', formData.river);
     const riverDocSnap = await getDoc(riverDocRef);
     
-    console.log("=== DEBUGGING INFO ===");
-    console.log("URL riverSlug:", riverSlug);
-    console.log("Document exists:", riverDocSnap.exists());
-    console.log("Firebase connection:", db ? "Connected" : "Not connected");
+    // console.log("=== DEBUGGING INFO ===");
+    // console.log("URL riverSlug:", riverSlug);
+    // console.log("Document exists:", riverDocSnap.exists());
+    // console.log("Firebase connection:", db ? "Connected" : "Not connected");
     if (!riverDocSnap.exists()) {
       console.warn('No such river doc found');
       return;
