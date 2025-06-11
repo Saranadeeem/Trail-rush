@@ -150,7 +150,7 @@
       Have you paddled this river recently? Share updated GPS coordinates or photos.
       Report changes in rapid classification or flow levels. Submit access and permit changes.
     </p>
-    <button class="submit-update-btn-large" onclick="document.getElementById('updateModal').style.display='flex'">
+    <button class="submit-update-btn-large" onclick="openUpdateModal()">
       Submit an update
     </button>
   </div>
@@ -1900,16 +1900,34 @@ async function populateRiverDropdown() {
 </div>
 
 <script>
+function resetUpdateForm() {
+  document.querySelectorAll(".tag-option.selected").forEach(tag => tag.classList.remove("selected"));
+  const riverSelect = document.getElementById("riverSelect");
+  const sectionSelect = document.getElementById("sectionSelect");
+  const nameInput = document.getElementById("nameInput");
+  if (riverSelect) {
+    riverSelect.selectedIndex = 0;
+    riverSelect.dispatchEvent(new Event('change'));
+  }
+  if (sectionSelect) sectionSelect.selectedIndex = 0;
+  if (nameInput) nameInput.value = "";
+  if (picker) picker.clear();
+  const dateInput = document.getElementById("dateInput");
+  if (dateInput) dateInput.value = "";
+}
+function openUpdateModal() {
+  resetUpdateForm();
+  const modal = document.getElementById("updateModal");
+  if (modal) modal.style.display = "flex";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('updateModal');
   const closeBtn = document.getElementById('closeModal');
   const calendarToggle = document.getElementById('calendarToggle');
   const dateInput = document.getElementById('dateInput');
   const submitBtn = document.getElementById('submitBtn');
-
-
   // Initialize Flatpickr
-  let picker;
   if (dateInput) {
     picker = flatpickr(dateInput, {
       dateFormat: "m/d/Y",
@@ -1927,6 +1945,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 🔴 Close modal
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
+      resetUpdateForm();
       modal.style.display = 'none';
     });
   }
@@ -2031,6 +2050,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 
+    resetUpdateForm();
     if (modal) modal.style.display = 'none';
 
       });
