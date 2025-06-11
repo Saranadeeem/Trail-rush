@@ -1719,7 +1719,7 @@
                 <p><span class="field-label">Road Conditions:</span> ${renderTags(update.roadConditions)}</p>
                 <p><span class="field-label">Permit:</span> <span class="tag">${update.permits || 'No data'}</span></p>
                 <p><span class="field-label">Safety Notes:</span> ${renderTags(update.safetyNotes)}</p>
-                <p><span class="field-label">Last Updated:</span> <span class="tag">${update.lastUpdated?.split('T')[0] || 'Unknown date'}</span></p>
+                <p><span class="field-label">Last Updated:</span> <span class="tag">${update.visitDate || update.lastUpdated?.split('T')[0] || 'Unknown date'}</span></p>
               </div>
               <div class="contributor"><b>Contributor:</b> ${update.contributor || 'Anonymous'}</div>
             </div>
@@ -1989,6 +1989,7 @@ document.addEventListener('DOMContentLoaded', function () {
       roadConditions: formData.roadConditions,
       permits: formData.permits.length ? formData.permits : ['No data'],
       safetyNotes: formData.safetyNotes,
+      visitDate: formData.date,
       lastUpdated: new Date().toISOString()
     };
 
@@ -2014,7 +2015,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p><span class="field-label">Road Conditions:</span> ${formData.roadConditions.length ? formData.roadConditions.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
         <p><span class="field-label">Permit:</span> ${formData.permits.length ? formData.permits.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
         <p><span class="field-label">Safety Notes:</span> ${formData.safetyNotes.length ? formData.safetyNotes.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Last Updated:</span> <span class="tag">${formData.date || 'Unknown date'}</span></p>
+        <p><span class="field-label">Last Updated:</span> <span class="tag">${updateEntry.visitDate || updateEntry.lastUpdated.split('T')[0]}</span></p>
       </div>
       <div class="contributor">Contributor: ${formData.name}</div>
     `;
