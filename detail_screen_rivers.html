@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is the key -->
+  <meta name="description" content="Paddle through Pakistan's wild rivers — epic white water, stunning views, and pure adrenaline.">
+  <meta name="keywords" content="white water kayaking, Pakistan rivers, Indus river, Gilgit River, Hunza River, Neelum River, Himalayas, Karakorum, Hindu Kush, Rondu gorge, adventure sports Pakistan">
+  <title>Whitewater Kayaking | Trail Rush</title>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  
+</head>
+ <nav class="navbar">
+    <div class="nav-left">
+       <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="assets/logo.svg" alt="Trail Rush Logo" class="logo" />
+      <span class="brand-text">Trail Rush</span>
+    </a>
+    </div>
+    
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+    <div class="nav-center">
+      <a href="/pricing" class="nav-link">Pricing</a>
+      <a href="/about" class="nav-link">About us</a>
+      <a href="/community" class="nav-link">Join our community</a>
+    </div>
+
+    <div class="nav-right">
+      <button class="signup-btn">Sign Up</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <span class="iconify close-btn" 
+      data-icon="mdi:close" 
+      style="color: #000000; cursor: pointer;" 
+      data-width="24" 
+      data-height="24">
+</span>
+
+    <a href="/pricing" style="display: flex; align-items: center; gap: 8px;">
+      <span class="iconify" data-icon="mdi:currency-usd" style="color: #ff0000;" data-width="20" data-height="20"></span>
+      Pricing
+    </a>
+    
+    <a href="/about" style="display: flex; align-items: center; gap: 8px;">
+      <span class="iconify" data-icon="mdi:information-outline" style="color: #ff0000;" data-width="20" data-height="20"></span>
+      About us
+    </a>
+    
+    <a href="/community" style="display: flex; align-items: center; gap: 8px;">
+      <span class="iconify" data-icon="mdi:account-group-outline" style="color: #ff0000;" data-width="20" data-height="20"></span>
+      Join our community
+    </a>
+    
+    <button onclick="window.location.href='/signup'" style="display: flex; align-items: center; gap: 8px; background: none; border: none; font: inherit; color: inherit; cursor: pointer;">
+      <span class="iconify" data-icon="mdi:logout-variant" style="color: #ff0000;" data-width="20" data-height="20"></span>
+      Sign Up
+    </button>
+  
+  </div>
+
+<body>
+<!-- HERO SECTION (Indus River) -->
+<section class="hero-section">
+    <div class="hero-background"> 
+            <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title" id="river-name">No Data</h1>
+          <p class="hero-subtitle" id="season-months">No Data</p>
+        </div>
+        <div class="hero-bottom">
+          <div class="info-row">
+            <div class="info-item">
+              <span class="info-title">Class</span>
+              <span class="info-value" id="river-class">No Data</span>
+            </div>
+            <div class="divider"></div>
+            <div class="info-item">
+              <span class="info-title">Elevation Drop</span>
+              <span class="info-value" id="elevation-drop">No Data</span>
+            </div>
+            <div class="divider"></div>
+            <div class="info-item">
+              <span class="info-title">Distance</span>
+              <span class="info-value" id="river-distance">No Data</span>
+            </div>
+          </div>
+  
+          <div class="status-box">
+            <span id="zone-label" style="font-weight: 400;">Restricted</span>
+            <div class="status-dot restricted"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- NOTE SECTION AND ACTION BUTTONS -->
+  <div class="page-controls-container">
+    <div class="note-section">
+      <div class="note-header">Note:</div>
+      <div class="note-content" id="note-content">Nothing yet</div>
+    </div>
+    
+    <div class="action-buttons-stack-outside">
+      <button class="primary-button">Add Your Check-In</button>
+      <button class="secondary-button">Improve this page</button>
+    </div>
+  </div>
+  
+  <!-- CONTENT SECTIONS -->
+  <section class="content-section">
+    <div class="content-inner">
+      <h2>Overview</h2>
+      <p id="overview-content">No Data</p>
+  
+      <h2>Description</h2>
+      <div id="description-content">No Data</div>
+  
+      <h2>History</h2>
+      <p id="history-content">No Data</p>
+    </div>
+  </section>
+  
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="content-inner">
+      <h2>Gallery</h2>
+      <div class="gallery-grid-custom">
+        <img src="assets/indusriverg.jpg" alt="Indusriver Image 1" class="img1">
+        <img src="assets/indusriverg.jpg" alt="Indusriver Image 2" class="img2">
+        <img src="assets/indusriverg.jpg" alt="Indusriver Image 3" class="img3">
+        <img src="assets/indusriverg.jpg" alt="Indusriver Image 4" class="img4">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUTE SECTION -->
+<section class="contribute-section">
+  <div class="content-inner">
+    <h2 class="contribute-title">Contribute Your Updates</h2>
+    <p class="contribute-subtitle">
+      Have you paddled this river recently? Share updated GPS coordinates or photos.
+      Report changes in rapid classification or flow levels. Submit access and permit changes.
+    </p>
+    <button class="submit-update-btn-large" onclick="document.getElementById('updateModal').style.display='flex'">
+      Submit an update
+    </button>
+  </div>
+</section>
+  
+  <!-- EXPLORE NEXT -->
+  <section class="explore-next">
+    <div class="content-inner">
+      <h1 class="section-title">Explore Next</h1>
+      
+      <div class="passes-container">
+          <!-- Babusar Pass Card -->
+          <div class="pass-card" id="babusar-pass">
+              <div class="pass-header">
+                  <div class="pass-name">Babusar Pass</div>
+                  <div class="status">
+                      Restricted
+                      <span class="status-indicator closed"></span>
+                  </div>
+              </div>
+              <img src="assets/indusriverg.jpg" alt="Babusar Pass" class="pass-image">
+              <div class="pass-details">
+                  <div class="detail-item">
+                      <div class="detail-label">Elevation</div>
+                      <div class="detail-value">4,693 m</div>
+                  </div>
+                  <div class="detail-item">
+                      <div class="detail-label">Duration</div>
+                      <div class="detail-value">Any Length</div>
+                  </div>
+                  <div class="detail-item">
+                      <div class="detail-label">Season</div>
+                      <div class="detail-value">June-Nov</div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Khunjerab Pass Card -->
+          <div class="pass-card" id="khunjerab-pass">
+              <div class="pass-header">
+                  <div class="pass-name">Khunjerab Pass</div>
+                  <div class="status">
+                      Open
+                      <span class="status-indicator open"></span>
+                  </div>
+              </div>
+              <img src="assets/indusriverg.jpg" alt="Khunjerab Pass" class="pass-image">
+              <div class="pass-details">
+                  <div class="detail-item">
+                      <div class="detail-label">Elevation</div>
+                      <div class="detail-value">4,370 m</div>
+                  </div>
+                  <div class="detail-item">
+                      <div class="detail-label">Duration</div>
+                      <div class="detail-value">Any Length</div>
+                  </div>
+                  <div class="detail-item">
+                      <div class="detail-label">Season</div>
+                      <div class="detail-value">June-Nov</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .navbar {
+      background-color: #f3e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 60px;
+      font-size: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    .brand-text {
+      font-size: 22px;
+      font-weight: 200;
+      color: #000;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-link {
+      font-weight: normal;
+      color: #666;      /* Even lighter gray */
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #d40000;
+    }
+
+    .signup-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .signup-btn:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+    }
+    .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    align-items: flex-end;
+    justify-content: center;
+    height: auto;
+    margin-left: auto;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 75%;
+      background-color: #f9f9f9;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    .mobile-menu a,
+    .mobile-menu button {
+      text-align: left;
+      font-size: 18px;
+      margin: 10px 0;
+      color: #000;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      align-self: flex-start;
+      font-size: 24px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+  .hero-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0; /* Changed padding to fix centering */
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 0 auto; /* Center align the section */
+  max-width: 95%; /* Control the max width */
+}
+  
+  
+  .hero-background {
+    background-image: url('assets/indusriverbg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 16px;
+    position: relative;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 8px 0 0;
+  }
+  
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .info-row {
+    display: flex;
+    gap: 16px;
+    color: white;
+    padding-bottom: 14px;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-title {
+    font-size: 1.05rem;
+    color: #cccccc;
+    margin-bottom: 6px;
+  }
+  
+  .info-value {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  .divider {
+    width: 2px;
+    background-color: white;
+    opacity: 0.6;
+    margin: 0 4px;
+  }
+  
+  .status-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 400;
+  }
+  
+  .status-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .status-dot.restricted {
+    background-color: red;
+  }
+  
+  .status-dot.open {
+    background-color: green;
+  }
+  
+  /* Note Section and Action Buttons */
+  .page-controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 24px 20px 32px;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .note-section {
+    flex: 1;
+    border: 1px dashed #aaa;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-left: 56px;  /* <-- add this line */
+    margin-right: 20px;
+    max-width: 60%;
+    min-height: 180px; /* Doubled height */
+  }
+  
+  .note-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .note-content {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .action-buttons-stack-outside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+  
+  .primary-button, .secondary-button {
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .primary-button {
+    background-color: red;
+    color: white;
+    border: none;
+  }
+  
+  .secondary-button {
+    background-color: #eee;
+    color: black;
+    border: none;
+  }
+
+  .description-section {
+  margin-top: 32px;
+  padding: 10x;
+  border-radius: 12px;
+  background-color: #fff;
+
+  }
+  
+  .content-section {
+    margin-bottom: 40px;
+  }
+  
+  .content-inner {
+    margin: 0 64px 0 80px; /* add more space on left side */
+  }
+  
+  .content-section h2 {
+    font-size: 2.4rem;  /* or even 2.5rem if you want larger titles */
+    font-weight: bold;
+    margin-top: 48px;
+  }
+  
+  .content-section p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  
+  .gallery-section {
+    margin-bottom: 40px;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-section .content-inner {
+    margin: 0 64px 0 80px; /* top, right, bottom, left */
+  }
+  
+  .gallery-grid-custom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+  
+  .gallery-grid-custom img {
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery-grid-custom .img1 {
+    grid-row: span 2;
+    height: 631px;
+    width: 483px;
+  }
+  
+  .gallery-grid-custom .img2 {
+    grid-column: 2;
+    height: 336px;
+    width: 363px;
+  }
+  
+  .gallery-grid-custom .img3 {
+    grid-column: 3;
+    height: 336px;
+    width: 363px;
+  }
+  
+  .gallery-grid-custom .img4 {
+    grid-column: 2 / span 2;
+    height: 281px;
+    width: 738px;
+  }
+
+  .contribute-section {
+  margin: 60px 64px;
+  text-align: center;
+}
+
+.contribute-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contribute-subtitle {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+.submit-update-btn-large {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-update-btn-large:hover {
+  background-color: #cc0000;
+}
+  
+  /* New styles for the Explore Next section */
+  .explore-next {
+    margin-bottom: 60px;
+  }
+  
+  .explore-next .content-inner {
+    margin: 0 64px 0 80px; /* top, right, bottom, left */
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 40px 0;
+    text-align: left;
+  }
+  
+  .passes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .pass-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 380px;
+  }
+  
+  .pass-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: left;
+  }
+  
+  .pass-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 6px;
+  }
+  
+  .status-indicator.open {
+    background-color: #4CAF50;
+  }
+  
+  .status-indicator.closed {
+    background-color: #F44336;
+  }
+  
+  .pass-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .pass-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    text-align: left;
+  }
+  
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .detail-label {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .detail-value {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+  }
+
+.update-box {
+  width: 1150px;
+  height: 180px;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto;
+  background: #F8F9FA;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.update-box .update-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 24px;
+}
+
+.update-box .update-fields p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: inherit;
+}
+
+.update-box .field-label {
+  font-weight: 600;
+  color: #222;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.update-box .tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background-color: #f0f0f0;
+  color: #222;
+  font-size: 14px;
+  border: 1px solid #d0d0d0;
+}
+
+.update-box .contributor {
+  text-align: right;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 14px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.update-box .contributor b {
+  font-weight: 700 !important;
+}
+    
+
+      .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+  }
+
+  .modal-content {
+    background: #FCFCFC;
+    padding: 24px;
+    border-radius: 16px;
+    width: 600px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+
+  /* Tags Styling */
+  .tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #C4C4C4;
+    background-color: transparent;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 4px;
+    user-select: none;
+  }
+
+  .tag.selected {
+    border-color: #FF0000;
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #FF0000;
+  }
+
+  /* Inputs, Select, Date */
+  input[type="text"], select, input[type="date"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #C4C4C4;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .date-wrapper {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .date-wrapper input {
+    padding-right: 40px;
+  }
+
+  .date-wrapper .date-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  /* Close Button */
+  .close-btn {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* NEW STYLES FOR THE UPDATE FORM */
+  .update-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .tag-option {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #C4C4C4;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+  }
+  
+  .tag-option.selected {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-color: #FF0000;
+    color: #000000;
+  }
+  /* Overrides for GitHub date-range-picker-js */
+.drp-calendar {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px 16px;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  z-index: 99999;
+}
+
+.drp-calendar .drp-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.drp-calendar .drp-day {
+  font-size: 14px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.drp-calendar .drp-day:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #FF0000;
+}
+
+.drp-calendar .drp-day-selected {
+  background-color: #FF0000;
+  color: white;
+  font-weight: bold;
+}
+
+.drp-calendar .drp-button {
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.drp-calendar .drp-button:hover {
+  background-color: #e00000;
+}
+  
+  .submit-btn {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #E00000;
+  }
+  
+  .name-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #C4C4C4;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+ 
+ /* Mobile Responsive Styles */
+
+/* Base Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+ .navbar {
+    padding: 16px 20px;
+    align-items: center;
+  }
+  
+  .nav-center,
+  .nav-right {
+    display: none;
+   
+      
+    }
+    .hamburger {
+    display: flex;
+    margin-left: auto;
+    }
+  
+  /* Hero Section Mobile - Fixed Layout */
+  .hero-section {
+    padding: 20px 16px 0;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hero-background {
+    width: 100%;
+    height: 65vh;
+    margin: 0;
+    border-radius: 16px;
+  }
+
+  .hero-overlay {
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin-bottom: 160px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+
+  .info-row {
+    display: flex;
+    gap: 2px;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+  }
+
+  .info-item {
+    text-align: left;
+    min-width: 100;
+  }
+
+  .info-title {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-bottom: 4px;
+  }
+
+  .info-value {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .divider {
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .status-box {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+  }
+
+  /* Page Controls Mobile - Action buttons above note */
+  .page-controls-container {
+    flex-direction: column;
+    margin: 20px 16px 24px;
+    max-width: 100%;
+  }
+
+  .action-buttons-stack-outside {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .primary-button, .secondary-button {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .note-section {
+    max-width: 60%;
+    margin: 0;
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  /* Content Sections Mobile */
+  .content-inner {
+    margin: 0 20px;
+  }
+
+  .content-section h2 {
+    font-size: 1.8rem;
+    margin-top: 32px;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+  }
+
+  /* Gallery Mobile - Proper Grid Layout */
+  .gallery-section .content-inner {
+    margin: 0 16px;
+  }
+
+  .gallery-grid-custom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 8px;
+  }
+
+  .gallery-grid-custom .img1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .gallery-grid-custom .img2 {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .gallery-grid-custom .img3 {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .gallery-grid-custom .img4 {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  /* Contribute Section Mobile */
+  .contribute-section {
+    margin: 40px 20px;
+  }
+
+  .contribute-title {
+    font-size: 1.6rem;
+  }
+
+  .contribute-subtitle {
+    font-size: 1rem;
+  }
+
+ /* Update Box Mobile - Horizontal Scroll Solution */
+.update-box {
+  width: calc(100% - 32px);
+  max-width: 100%;
+  margin: 16px auto;
+  padding: 0;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header section */
+.update-box .update-header {
+  padding: 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.update-box .update-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Scrollable content area */
+.update-box .update-content {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+}
+
+/* Fields container - maintains desktop grid but scrollable */
+.update-box .update-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 0;
+  min-width: 840px; /* 3 columns × 280px */
+  background-color: #f8f9fa;
+}
+
+/* Individual field styling */
+.update-box .update-fields .field-item {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 80px;
+}
+
+.update-box .update-fields .field-item:last-child {
+  border-right: none;
+}
+
+.update-box .field-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.update-box .field-value {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Tag styling */
+.update-box .tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin: 2px 4px 2px 0;
+  background-color: #e9ecef;
+  color: #495057;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* No data state */
+.update-box .no-data {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Contributor section */
+.update-box .contributor {
+  padding: 16px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #666;
+  text-align: right;
+}
+
+/* Scroll indicator (optional) */
+.update-box .scroll-indicator {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #adb5bd;
+  pointer-events: none;
+}
+
+  /* Explore Next Mobile - Proper Card Layout */
+  .explore-next .content-inner {
+    margin: 0 16px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin: 30px 0 20px 0;
+  }
+
+  .passes-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .pass-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .pass-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .pass-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .status {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 16px;
+    background-color: #f5f5f5;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+  }
+
+  .pass-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .pass-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #fff;
+  }
+
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .detail-label {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+
+  .detail-value {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  /* Modal Mobile */
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    padding: 20px;
+    margin: 20px;
+    max-height: 85vh;
+  }
+
+  .update-form-container h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .tags-container {
+    gap: 6px;
+  }
+
+  .tag-option {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  input[type="text"], 
+  select, 
+  input[type="date"],
+  .name-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  #calendarToggle {
+    width: 20px;
+    height: 20px;
+    right: 12px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-background {
+    height: 60vh;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+  }
+
+  .info-row {
+    gap: 12px;
+  }
+
+  .info-title {
+    font-size: 0.8rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
+  }
+
+  .status-box {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .pass-name {
+    font-size: 1.2rem;
+  }
+
+  .pass-header {
+    padding: 14px;
+  }
+
+  .status {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .detail-label {
+    font-size: 0.75rem;
+  }
+
+  .detail-value {
+    font-size: 0.85rem;
+  }
+
+  .modal-content {
+    width: 98%;
+    padding: 16px;
+    margin: 10px;
+  }
+
+  
+  .update-form-container h2 {
+    font-size: 18px;
+  }
+
+  .update-box.stacked .update-fields {
+    display: block;
+    min-width: auto;
+  }
+  
+  .update-box.stacked .update-fields .field-item {
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+    padding: 12px 16px;
+  }
+  
+  .update-box.stacked .update-fields .field-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+.update-box .update-content::-webkit-scrollbar {
+  height: 4px;
+}
+
+.update-box .update-content::-webkit-scrollbar-track {
+  background: #f1f3f4;
+}
+
+.update-box .update-content::-webkit-scrollbar-thumb {
+  background: #c1c7cd;
+  border-radius: 2px;
+}
+
+.update-box .update-content::-webkit-scrollbar-thumb:hover {
+  background: #a8b0b8;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 480px) {
+  .updates-container {
+    padding: 0 8px;
+  }
+
+  .tag-option {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .gallery-grid-custom .img1 {
+    height: 200px;
+  }
+
+  .gallery-grid-custom .img2,
+  .gallery-grid-custom .img3 {
+    height: 120px;
+  }
+
+  .gallery-grid-custom .img4 {
+    height: 160px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-background {
+    height: 70vh;
+  }
+  
+  .hero-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .info-row {
+    flex-direction: row;
+  }
+  
+  .divider {
+    display: block;
+  }
+}
+    </style>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+  import {
+  getFirestore, doc, getDoc, collection, getDocs, setDoc, updateDoc
+} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCQWZR7VT7QQn4ecmJEzBOepZFWgNzWjy4",
+    authDomain: "trail-rush-ef457.firebaseapp.com",
+    projectId: "trail-rush-ef457",
+    storageBucket: "trail-rush-ef457.firebasestorage.app",
+    messagingSenderId: "77035797123",
+    appId: "1:77035797123:web:d35fb582cd1bbd204d39b6"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  let riverSlug = null; // ✅ Declare globally
+
+  document.addEventListener('DOMContentLoaded', async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  riverSlug = urlParams.get('river'); // ✅ Assign value to global variable
+
+    if (!riverSlug) {
+      console.warn("No 'river' parameter in URL.");
+      return;
+    }
+
+    const docRef = doc(db, 'Detailrivers', riverSlug);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      window.riverData = docSnap.data();
+      console.log("Document data:", docSnap.data());     // ← ADD HERE
+
+      populateRiverDropdown();
+
+        
+      document.getElementById('river-class').textContent = window.riverData.Class || 'No Data';
+      document.getElementById('elevation-drop').textContent = window.riverData["Elevation Drop"] || 'No Data';
+      document.getElementById('river-distance').textContent = window.riverData.Distance || 'No Data';
+      document.getElementById('note-content').textContent = window.riverData.Note || 'No Data';
+      document.getElementById('overview-content').textContent = window.riverData.Overview || 'No Data';
+      document.getElementById('history-content').textContent = window.riverData.History || 'No Data';
+      document.getElementById('river-name').textContent = window.riverData.Name || riverSlug;
+      document.getElementById('season-months').textContent = window.riverData.Season || 'No Data';
+      document.getElementById('zone-label').textContent = window.riverData.Zone || 'Unknown';
+
+      
+  if (window.riverData.Description && Array.isArray(window.riverData.Description)) {
+  const descContainer = document.getElementById('description-content');
+  descContainer.innerHTML = '';
+
+  window.riverData.Description.forEach((section, index) => {
+  if (!section || !section.content) {
+    console.warn(`Missing content in Description[${index}]:`, section);
+    return;
+  }
+
+  const title = section.title || `Section ${index + 1}`;
+  const content = section.content.trim();
+
+  const noteMatch = content.match(/(Note:[^.]*\.)/i);
+  const note = noteMatch ? noteMatch[1] : null;
+  const cleanedContent = note ? content.replace(note, '').trim() : content;
+
+  const formattedParagraph = `<p>${cleanedContent}</p>`;
+  const formattedNote = note
+    ? `<p style="margin-left: 20px; font-style: italic;">${note}</p>`
+    : '';
+
+  const sectionHTML = `
+    <div class="description-section">
+      <h3><strong>${title}</strong></h3>
+      ${formattedParagraph}
+      ${formattedNote}
+      <div class="community-updates" id="updates-${index}"></div>
+    </div>
+  `;
+
+
+
+  document.getElementById('description-content').innerHTML += sectionHTML;
+});
+    }
+
+      // Updates
+      if (window.riverData.updates) {
+        Object.keys(window.riverData.updates).forEach(sectionIndex => {
+          const updatesContainer = document.getElementById(`updates-${sectionIndex}`);
+          if (!updatesContainer) return;
+
+          const updatesHTML = Object.values(window.riverData.updates[sectionIndex]).map(update => `
+            <div class="update-box">
+              <div class="update-fields">
+                <p><span class="field-label">Hazards:</span> ${renderTags(update.hazards)}</p>
+                <p><span class="field-label">Water Levels:</span> ${renderTags(update.waterLevels)}</p>
+                <p><span class="field-label">Road Conditions:</span> ${renderTags(update.roadConditions)}</p>
+                <p><span class="field-label">Permit:</span> <span class="tag">${update.permits || 'No data'}</span></p>
+                <p><span class="field-label">Safety Notes:</span> ${renderTags(update.safetyNotes)}</p>
+                <p><span class="field-label">Last Updated:</span> <span class="tag">${update.lastUpdated?.split('T')[0] || 'Unknown date'}</span></p>
+              </div>
+              <div class="contributor"><b>Contributor:</b> ${update.contributor || 'Anonymous'}</div>
+            </div>
+          `).join('');
+
+          updatesContainer.innerHTML = updatesHTML;
+        });
+      }
+    } else {
+      console.warn("No such document in Firestore:", riverSlug);
+
+  
+    }
+  });
+
+  function renderTags(arr) {
+    return arr?.length ? arr.map(t => `<span class="tag">${t}</span>`).join(' ') : '<span class="tag">No data</span>';
+  }
+
+async function populateRiverDropdown() {
+  const riverSelect = document.getElementById('riverSelect');
+  const sectionSelect = document.getElementById('sectionSelect');
+  const snapshot = await getDocs(collection(db, 'list_of_rivers'));
+
+  const riversData = [];
+
+  snapshot.forEach(doc => {
+    const data = doc.data();
+    if (data.rivers) {
+      for (const [riverName, riverDetails] of Object.entries(data.rivers)) {
+        riversData.push({
+          name: riverName,
+          sections: riverDetails.sections || []
+        });
+      }
+    }
+  });
+
+  // Populate river dropdown
+  riverSelect.innerHTML = '';
+  riversData.forEach(river => {
+    const option = document.createElement('option');
+    option.value = river.name;
+    option.textContent = river.name;
+    riverSelect.appendChild(option);
+  });
+
+  // Initial sections for the first river
+  if (riversData.length > 0) {
+    updateSections(riversData[0].sections);
+  }
+
+  // On change, update sections
+  riverSelect.addEventListener('change', e => {
+    const selectedRiver = riversData.find(r => r.name === e.target.value);
+    updateSections(selectedRiver ? selectedRiver.sections : []);
+  });
+
+  function updateSections(sections) {
+    sectionSelect.innerHTML = '';
+    sections.forEach(sec => {
+      const option = document.createElement('option');
+      option.value = sec;
+      option.textContent = sec;
+      sectionSelect.appendChild(option);
+    });
+  }
+}
+  
+</script>
+
+
+<!-- Update form modal HTML -->
+<div id="updateModal" class="modal">
+  <div class="modal-content">
+    <div class="update-form-container">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <h2>Submit an update</h2>
+      
+      <!-- River selection -->
+      <div class="form-group">
+        <label for="riverSelect">River</label>
+        <select id="riverSelect" class="name-input"></select>
+      </div>
+      
+      <!-- River section selection -->
+      <div class="form-group">
+        <label for="sectionSelect">River Section</label>
+        <select id="sectionSelect" class="name-input"></select>
+      </div>
+      
+      <!-- Hazards -->
+      <div class="form-group">
+        <label>Hazards</label>
+        <div class="tags-container">
+          <span class="tag-option selected">Landslide</span>
+          <span class="tag-option">GLOF</span>
+          <span class="tag-option">Log jam</span>
+          <span class="tag-option">Strainers</span>
+          <span class="tag-option">Undercuts</span>
+          <span class="tag-option">New technical rapid</span>
+          <span class="tag-option">Riverbank erosion</span>
+        </div>
+      </div>
+      
+      <!-- Water Levels -->
+      <div class="form-group">
+        <label>Water Levels</label>
+        <div class="tags-container">
+          <span class="tag-option">Low (scraping bottom)</span>
+          <span class="tag-option">High (pushy water)</span>
+          <span class="tag-option selected">Runnable (good flow)</span>
+          <span class="tag-option">Flood</span>
+          <span class="tag-option">Ice melt surge (for glacial rivers)</span>
+        </div>
+      </div>
+      
+      <!-- Road Conditions -->
+      <div class="form-group">
+        <label>Road Conditions</label>
+        <div class="tags-container">
+          <span class="tag-option selected">Clear</span>
+          <span class="tag-option">Landslide blocking access</span>
+          <span class="tag-option">Bridge out</span>
+          <span class="tag-option">Seasonal closure</span>
+          <span class="tag-option">River crossing required (4x4)</span>
+        </div>
+      </div>
+      
+      <!-- Permits -->
+      <div class="form-group">
+        <label>Permits</label>
+        <div class="tags-container">
+          <span class="tag-option selected">Open</span>
+          <span class="tag-option">Restricted</span>
+        </div>
+      </div>
+      
+      <!-- Safety Notes -->
+      <div class="form-group">
+        <label>Safety Notes</label>
+        <div class="tags-container">
+          <span class="tag-option selected">No cell signal</span>
+          <span class="tag-option">Rescue not available nearby</span>
+          <span class="tag-option">Local conflict/security concern</span>
+          <span class="tag-option">Hypothermia risk</span>
+        </div>
+      </div>
+      
+      <div class="form-group">
+  <label for="dateInput">Date</label>
+  <div id="date-wrapper" class="date-picker-container" style="position: relative;">
+    <input type="text" id="dateInput" class="name-input" placeholder="Select date" readonly />
+    <img
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik01IDIycS0uODI1IDAtMS40MTItLjU4N1QzIDIwVjZxMC0uODI1LjU4OC0xLjQxMlQ1IDRoMVYyaDJ2Mmg4VjJoMnYyaDFxLjgyNSAwIDEuNDEzLjU4OFQyMSA2djE0cTAgLjgyNS0uNTg3IDEuNDEzVDE5IDIyem0wLTJoMTRWMTBINXpNNSA4aDE0VjZINXptMCAwVjZ6bTcgNnEtLjQyNSAwLS43MTItLjI4OFQxMSAxM3QuMjg4LS43MTJUMTIgMTJ0LjcxMy4yODhUMTMgMTN0LS4yODguNzEzVDEyIDE0bS00IDBxLS40MjUgMC0uNzEyLS4yODhUNyAxM3QuMjg4LS43MTJUOCAxMnQuNzEzLjI4OFQ5IDEzdC0uMjg4LjcxM1Q4IDE0bTggMHEtLjQyNSAwLS43MTItLjI4OFQxNSAxM3QuMjg4LS43MTJUMTYgMTJ0LjcxMy4yODhUMTcgMTN0LS4yODguNzEzVDE2IDE0bS00IDRxLS40MjUgMC0uNzEyLS4yODhUMTEgMTd0LjI4OC0uNzEyVDEyIDE2dC43MTMuMjg4VDEzIDE3dC0uMjg4LjcxM1QxMiAxOG0tNCAwcS0uNDI1IDAtLjcxMi0uMjg4VDcgMTd0LjI4OC0uNzEyVDggMTZ0LjcxMy4yODhUOSAxN3QtLjI4OC43MTNUOCAxOG04IDBxLS40MjUgMC0uNzEyLS4yODhUMTUgMTd0LjI4OC0uNzEyVDE2IDE2dC43MTMuMjg4VDE3IDE3dC0uMjg4LjcxM1QxNiAxOCIvPjwvc3ZnPg=="
+    alt="calendar"
+    id="calendarToggle"
+    style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 24px; height: 24px; cursor: pointer;"
+  />
+  </div>
+</div>
+
+      
+      <!-- Name Input -->
+      <div class="form-group">
+        <label for="nameInput">Name</label>
+        <input type="text" id="nameInput" class="name-input" placeholder="Your name">
+      </div>
+      
+      <!-- Submit Button -->
+      <button id="submitBtn" class="submit-btn">Submit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('updateModal');
+  const closeBtn = document.getElementById('closeModal');
+  const calendarToggle = document.getElementById('calendarToggle');
+  const dateInput = document.getElementById('dateInput');
+  const submitBtn = document.querySelector('.submit-btn');
+
+
+  // Initialize Flatpickr
+  let picker;
+  if (dateInput) {
+    picker = flatpickr(dateInput, {
+      dateFormat: "m/d/Y",
+      clickOpens: false // Prevent input click from opening
+    });
+  }
+
+  // Calendar icon click
+  if (calendarToggle && picker) {
+    calendarToggle.addEventListener('click', () => {
+      picker.open();
+    });
+  }
+
+  // 🔴 Close modal
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+
+  // 🔴 Remove 'selected' from all tags initially
+  document.querySelectorAll('.tag-option').forEach(tag => tag.classList.remove('selected'));
+
+  // 🔴 Add tag click behavior
+  document.querySelectorAll('.tags-container').forEach(group => {
+    const label = group.closest('.form-group').querySelector('label')?.textContent.trim();
+    const isSingle = ['Permits'].includes(label);
+
+    group.querySelectorAll('.tag-option').forEach(tag => {
+      tag.addEventListener('click', () => {
+        if (isSingle) {
+          group.querySelectorAll('.tag-option').forEach(t => t.classList.remove('selected'));
+          tag.classList.add('selected');
+        } else {
+          tag.classList.toggle('selected');
+        }
+      });
+    });
+  });
+
+  // 🔴 Submit form
+  if (submitBtn) {
+  submitBtn.addEventListener('click', async function () {
+    const formData = {
+      river: document.getElementById('riverSelect').value,
+      section: document.getElementById('sectionSelect').value,
+      hazards: getTagsByLabel('Hazards'),
+      waterLevels: getTagsByLabel('Water Levels'),
+      roadConditions: getTagsByLabel('Road Conditions'),
+      permits: getTagsByLabel('Permits'),
+      safetyNotes: getTagsByLabel('Safety Notes'),
+      date: dateInput.value,
+      name: document.getElementById('nameInput').value || 'Anonymous'
+    };
+    // STEP: Find section index (which section user selected)
+    const sectionIndex = document.getElementById('sectionSelect').selectedIndex;
+
+    // STEP: Save to Firestore
+    const riverDocRef = doc(db, 'Detailrivers', formData.river);
+    const riverDocSnap = await getDoc(riverDocRef);
+    
+    console.log("=== DEBUGGING INFO ===");
+    console.log("URL riverSlug:", riverSlug);
+    console.log("Document exists:", riverDocSnap.exists());
+    console.log("Firebase connection:", db ? "Connected" : "Not connected");
+    if (!riverDocSnap.exists()) {
+      console.warn('No such river doc found');
+      return;
+    }
+
+    const updateId = `update_${Date.now()}`;
+    const updateEntry = {
+      contributor: formData.name,
+      hazards: formData.hazards,
+      waterLevels: formData.waterLevels,
+      roadConditions: formData.roadConditions,
+      permits: formData.permits.length ? formData.permits : ['No data'],
+      safetyNotes: formData.safetyNotes,
+      lastUpdated: new Date().toISOString()
+    };
+
+    await updateDoc(riverDocRef, {
+    [ `updates.${sectionIndex}.${updateId}` ]: updateEntry
+    });
+    alert("Update submitted!");
+
+
+
+    if (!window.riverData.updates) window.riverData.updates = {};
+    if (!window.riverData.updates[sectionIndex]) window.riverData.updates[sectionIndex] = {};
+    window.riverData.updates[sectionIndex][updateId] = updateEntry;
+
+
+    // STEP: Create the update box
+    const box = document.createElement('div');
+    box.className = 'update-box';
+    box.innerHTML = `
+      <div class="update-fields">
+        <p><span class="field-label">Hazards:</span> ${formData.hazards.length ? formData.hazards.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+        <p><span class="field-label">Water Levels:</span> ${formData.waterLevels.length ? formData.waterLevels.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+        <p><span class="field-label">Road Conditions:</span> ${formData.roadConditions.length ? formData.roadConditions.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+        <p><span class="field-label">Permit:</span> ${formData.permits.length ? formData.permits.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+        <p><span class="field-label">Safety Notes:</span> ${formData.safetyNotes.length ? formData.safetyNotes.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+        <p><span class="field-label">Last Updated:</span> <span class="tag">${formData.date || 'Unknown date'}</span></p>
+      </div>
+      <div class="contributor">Contributor: ${formData.name}</div>
+    `;
+
+    // STEP: Show it under the correct section
+    const updatesContainer = document.getElementById(`updates-${sectionIndex}`);
+    if (updatesContainer) {
+      updatesContainer.prepend(box);
+      while (updatesContainer.children.length > 3) {
+        updatesContainer.removeChild(updatesContainer.lastChild);
+      }
+    }
+
+    
+
+    if (modal) modal.style.display = 'none';
+
+      });
+    }
+
+  function getTagsByLabel(labelText) {
+    const group = Array.from(document.querySelectorAll('.form-group')).find(g =>
+      g.querySelector('label')?.textContent.trim() === labelText
+    );
+    if (!group) return [];
+    return Array.from(group.querySelectorAll('.tag-option.selected')).map(el => el.textContent.trim());
+  }
+
+  });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeBtn = document.querySelector('.close-btn');
+
+      hamburger.addEventListener('click', () => {
+        mobileMenu.style.display = 'flex';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+      });
+    });
+  </script>
+
+<footer style="background-color: #205f5a; color: #ffffff; padding: 2rem 1rem 2rem 1rem; font-family: sans-serif; margin-top: 50px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+    <!-- Branding -->
+    <div style="flex: 1 1 250px; margin-bottom: 1rem;">
+      <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: bold;">Trail Rush</h3>
+      <p style="font-size: 0.9rem; color: #d3d3d3; line-height: 1.5; max-width: 240px;">Pakistan’s premier platform<br>for exploring hidden trails<br>and breathtaking hikes.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 200px; margin-bottom: 1rem;">
+      <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: bold;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li><a href="/pricing" style="color: #d3d3d3; text-decoration: none; font-size: 0.9rem;">Pricing</a></li>
+        <li><a href="/about" style="color: #d3d3d3; text-decoration: none; font-size: 0.9rem;">About Us</a></li>
+        <li><a href="/community" style="color: #d3d3d3; text-decoration: none; font-size: 0.9rem;">Join our Community</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex: 1 1 200px; margin-bottom: 1rem;">
+      <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: bold;">Contact Us</h4>
+      <p style="font-size: 0.9rem; color: #d3d3d3;">info@thetrailrush.com</p>
+    </div>
+  </div>
+
+  <hr style="border-color: #9aa9a9; margin: 1.5rem 0 1rem 0;">
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <p style="font-size: 0.9rem; color: #d3d3d3; margin-bottom: 0.5rem;">Want fresh trail stories and updates? Follow us:</p>
+    <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem;">
+      <a href="https://www.facebook.com/profile.php?id=61560304075779" aria-label="Facebook" style="color: #ffffff;" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="mdi:facebook" data-width="26" data-height="26"></span></a>
+      <a href="https://www.instagram.com/thetrailrush/" aria-label="Instagram" style="color: #ffffff;" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="mdi:instagram" data-width="26" data-height="26"></span></a>
+      <a href="https://www.linkedin.com/company/trail-rush/posts/?feedView=all" aria-label="LinkedIn" style="color: #ffffff;" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="mdi:linkedin" data-width="26" data-height="26"></span></a>
+    </div>
+    <p style="font-size: 0.8rem; color: #aaaaaa; margin-top: 2rem;">2025© Trail Rush. All rights reserved.</p>
+  </div>
+</footer>
+<!-- Add Iconify for icons -->
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</body>
+</html>
