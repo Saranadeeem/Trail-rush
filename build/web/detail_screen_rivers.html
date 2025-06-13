@@ -11,7 +11,9 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   
 </head>
- <nav class="navbar">
+
+<body>
+  <nav class="navbar">
     <div class="nav-left">
        <a href="/" style="display: flex; align-items: center; text-decoration: none;">
       <img src="assets/logo.svg" alt="Trail Rush Logo" class="logo" />
@@ -65,8 +67,6 @@
     </button>
   
   </div>
-
-<body>
 <!-- HERO SECTION (Indus River) -->
 <section class="hero-section">
     <div class="hero-background"> 
@@ -2021,13 +2021,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-
-  
-    
-
-    if (modal) modal.style.display = 'none';
-
-      });
 
   function getTagsByLabel(labelText) {
     const group = Array.from(document.querySelectorAll('.form-group')).find(g =>
