@@ -1792,7 +1792,93 @@ async function populateRiverDropdown() {
     });
   }
 }
-  
+
+// Submission handling moved here to access Firebase imports
+document.addEventListener('DOMContentLoaded', () => {
+  const submitBtn = document.getElementById('submitBtn');
+  const modal = document.getElementById('updateModal');
+  const dateInput = document.getElementById('dateInput');
+
+  if (submitBtn) {
+    submitBtn.addEventListener('click', async () => {
+      const formData = {
+        river: document.getElementById('riverSelect').value,
+        section: document.getElementById('sectionSelect').value,
+        hazards: getTagsByLabel('Hazards'),
+        waterLevels: getTagsByLabel('Water Levels'),
+        roadConditions: getTagsByLabel('Road Conditions'),
+        permits: getTagsByLabel('Permits'),
+        safetyNotes: getTagsByLabel('Safety Notes'),
+        date: dateInput.value,
+        name: document.getElementById('nameInput').value || 'Anonymous'
+      };
+
+      const sectionIndex = document.getElementById('sectionSelect').selectedIndex;
+
+      const riverDocRef = doc(db, 'Detailrivers', formData.river);
+      const riverDocSnap = await getDoc(riverDocRef);
+      if (!riverDocSnap.exists()) {
+        console.warn('No such river doc found');
+        return;
+      }
+
+      const updateId = `update_${Date.now()}`;
+      const updateEntry = {
+        contributor: formData.name,
+        hazards: formData.hazards,
+        waterLevels: formData.waterLevels,
+        roadConditions: formData.roadConditions,
+        permits: formData.permits.length ? formData.permits : ['No data'],
+        safetyNotes: formData.safetyNotes,
+        visitDate: formData.date,
+        lastUpdated: new Date().toISOString()
+      };
+
+      await updateDoc(riverDocRef, {
+        [`updates.${sectionIndex}.${updateId}`]: updateEntry
+      });
+      alert('Update submitted!');
+
+      if (!window.riverData.updates) window.riverData.updates = {};
+      if (!window.riverData.updates[sectionIndex]) window.riverData.updates[sectionIndex] = {};
+      window.riverData.updates[sectionIndex][updateId] = updateEntry;
+
+      const box = document.createElement('div');
+      box.className = 'update-box';
+      box.innerHTML = `
+        <div class="update-fields">
+          <p><span class="field-label">Hazards:</span> ${formData.hazards.length ? formData.hazards.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+          <p><span class="field-label">Water Levels:</span> ${formData.waterLevels.length ? formData.waterLevels.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+          <p><span class="field-label">Road Conditions:</span> ${formData.roadConditions.length ? formData.roadConditions.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+          <p><span class="field-label">Permit:</span> ${formData.permits.length ? formData.permits.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+          <p><span class="field-label">Safety Notes:</span> ${formData.safetyNotes.length ? formData.safetyNotes.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
+          <p><span class="field-label">Last Updated:</span> <span class="tag">${updateEntry.visitDate || updateEntry.lastUpdated.split('T')[0]}</span></p>
+        </div>
+        <div class="contributor">Contributor: ${formData.name}</div>
+      `;
+
+      const updatesContainer = document.getElementById(`updates-${sectionIndex}`);
+      if (updatesContainer) {
+        updatesContainer.prepend(box);
+        while (updatesContainer.children.length > 3) {
+          updatesContainer.removeChild(updatesContainer.lastChild);
+        }
+      }
+
+      resetUpdateForm();
+      if (modal) modal.style.display = 'none';
+    });
+  }
+});
+
+function getTagsByLabel(labelText) {
+  const group = Array.from(document.querySelectorAll('.form-group')).find(g =>
+    g.querySelector('label')?.textContent.trim() === labelText
+  );
+  if (!group) return [];
+  return Array.from(group.querySelectorAll('.tag-option.selected')).map(el => el.textContent.trim());
+}
+
 </script>
 
 
@@ -1970,100 +2056,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // 🔴 Submit form
-  if (submitBtn) {
-  submitBtn.addEventListener('click', async function () {
-    const formData = {
-      river: document.getElementById('riverSelect').value,
-      section: document.getElementById('sectionSelect').value,
-      hazards: getTagsByLabel('Hazards'),
-      waterLevels: getTagsByLabel('Water Levels'),
-      roadConditions: getTagsByLabel('Road Conditions'),
-      permits: getTagsByLabel('Permits'),
-      safetyNotes: getTagsByLabel('Safety Notes'),
-      date: dateInput.value,
-      name: document.getElementById('nameInput').value || 'Anonymous'
-    };
-    // STEP: Find section index (which section user selected)
-    const sectionIndex = document.getElementById('sectionSelect').selectedIndex;
-
-    // STEP: Save to Firestore
-    const riverDocRef = doc(db, 'Detailrivers', formData.river);
-    const riverDocSnap = await getDoc(riverDocRef);
-    
-    // console.log("=== DEBUGGING INFO ===");
-    // console.log("URL riverSlug:", riverSlug);
-    // console.log("Document exists:", riverDocSnap.exists());
-    // console.log("Firebase connection:", db ? "Connected" : "Not connected");
-    if (!riverDocSnap.exists()) {
-      console.warn('No such river doc found');
-      return;
-    }
-
-    const updateId = `update_${Date.now()}`;
-    const updateEntry = {
-      contributor: formData.name,
-      hazards: formData.hazards,
-      waterLevels: formData.waterLevels,
-      roadConditions: formData.roadConditions,
-      permits: formData.permits.length ? formData.permits : ['No data'],
-      safetyNotes: formData.safetyNotes,
-      visitDate: formData.date,
-      lastUpdated: new Date().toISOString()
-    };
-
-    await updateDoc(riverDocRef, {
-    [ `updates.${sectionIndex}.${updateId}` ]: updateEntry
-    });
-    alert("Update submitted!");
-
-
-
-    if (!window.riverData.updates) window.riverData.updates = {};
-    if (!window.riverData.updates[sectionIndex]) window.riverData.updates[sectionIndex] = {};
-    window.riverData.updates[sectionIndex][updateId] = updateEntry;
-
-
-    // STEP: Create the update box
-    const box = document.createElement('div');
-    box.className = 'update-box';
-    box.innerHTML = `
-      <div class="update-fields">
-        <p><span class="field-label">Hazards:</span> ${formData.hazards.length ? formData.hazards.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Water Levels:</span> ${formData.waterLevels.length ? formData.waterLevels.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Road Conditions:</span> ${formData.roadConditions.length ? formData.roadConditions.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Permit:</span> ${formData.permits.length ? formData.permits.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Safety Notes:</span> ${formData.safetyNotes.length ? formData.safetyNotes.map(val => `<span class="tag">${val}</span>`).join(' ') : '<span class="tag">No data</span>'}</p>
-        <p><span class="field-label">Last Updated:</span> <span class="tag">${updateEntry.visitDate || updateEntry.lastUpdated.split('T')[0]}</span></p>
-      </div>
-      <div class="contributor">Contributor: ${formData.name}</div>
-    `;
-
-    // STEP: Show it under the correct section
-    const updatesContainer = document.getElementById(`updates-${sectionIndex}`);
-    if (updatesContainer) {
-      updatesContainer.prepend(box);
-      while (updatesContainer.children.length > 3) {
-        updatesContainer.removeChild(updatesContainer.lastChild);
-      }
-    }
-
-    
-
-    resetUpdateForm();
-    if (modal) modal.style.display = 'none';
-
-      });
-    }
-
-  function getTagsByLabel(labelText) {
-    const group = Array.from(document.querySelectorAll('.form-group')).find(g =>
-      g.querySelector('label')?.textContent.trim() === labelText
-    );
-    if (!group) return [];
-    return Array.from(group.querySelectorAll('.tag-option.selected')).map(el => el.textContent.trim());
-  }
-
+  // Remove old submit logic; handled in module script
+  
   });
 </script>
 
